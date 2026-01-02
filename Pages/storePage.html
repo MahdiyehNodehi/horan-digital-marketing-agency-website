@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Template Marketplace</title>
+  <link rel="stylesheet" href="/Css/StorePage.css">
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Explore Premium Templates</h1>
+  <p>Professional front-end templates and digital marketing solutions</p>
+  <input id="searchInput" type="text" placeholder="Search templates...">
+</section>
+
+<!-- MAIN -->
+<section class="marketplace">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h3>Filters</h3>
+
+    <div class="filter categories">
+  <h4>Categories</h4>
+
+  <div class="category-item active" data-category="all">All Templates</div>
+  <div class="category-item" data-category="landing">Landing Pages</div>
+  <div class="category-item" data-category="dashboard">Dashboards</div>
+  <div class="category-item" data-category="portfolio">Portfolios</div>
+</div>
+
+
+    <div class="filter">
+      <h4>Max Price</h4>
+      <input type="range" id="priceRange" min="0" max="100" value="0">
+      <span id="priceValue">$100</span>
+    </div>
+  </aside>
+
+  <!-- CARDS -->
+  <div>
+    <div id="cards" class="cards"></div>
+
+    <!-- PAGINATION -->
+    <div class="pagination">
+      <button id="prev">‹</button>
+      <span id="pages"></span>
+      <button id="next">›</button>
+    </div>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2025 TemplateStore. All rights reserved.</p>
+</footer>
+
+<script src="/Js/script.js"></script>
+</body>
+</html>

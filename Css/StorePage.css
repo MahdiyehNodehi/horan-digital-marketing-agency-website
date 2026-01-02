@@ -1,0 +1,224 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0b1623;
+  color: #fff;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: radial-gradient(circle, #1c2b3f, #0b1623);
+}
+
+.hero input {
+  margin-top: 20px;
+  padding: 14px;
+  width: 300px;
+  border-radius: 10px;
+  border: none;
+  background: #15263a;
+  color: #fff;
+}
+
+/* LAYOUT */
+.marketplace {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 30px;
+  padding: 40px;
+}
+
+/* FILTER SIDEBAR */
+.sidebar {
+  background: linear-gradient(180deg, #0f1f33, #0b1623);
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03);
+}
+
+.sidebar h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.filter {
+  margin-bottom: 28px;
+}
+
+/* CATEGORY CHIPS */
+.filter button {
+  display: inline-block;
+  margin: 6px 6px 0 0;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #0b2a44;
+  color: #8fd9ff;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.25s ease;
+}
+
+.filter button:hover {
+  background: #0e3a5c;
+}
+
+.filter button.active {
+  background: #00b4ff;
+  color: #001522;
+  box-shadow: 0 8px 20px rgba(0,180,255,0.3);
+}
+
+/* PRICE RANGE */
+#priceRange {
+  width: 100%;
+  margin-top: 14px;
+  accent-color: #00b4ff;
+}
+
+#priceValue {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
+  gap: 24px;
+}
+
+.card {
+  background: #0f1f33;
+  border-radius: 16px;
+  overflow: hidden;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeUp 0.6s forwards;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.card img {
+  width: 100%;
+}
+
+.card-body {
+  padding: 18px;
+}
+
+.card-body h3 {
+  margin: 0 0 8px;
+}
+
+.price {
+  color: #ff7a2f;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* PAGINATION */
+.pagination {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+#pages { 
+    display: flex; 
+    gap: 12px; 
+}
+
+.pagination button {
+  background: #0f1f33;
+  border: none;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background: #00b4ff;
+  color: #001522;
+}
+.card {
+  transition: 
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.45);
+}
+
+.card img {
+  transition: transform 0.6s ease;
+}
+
+.card:hover img {
+  transform: scale(1.08);
+}
+/* CATEGORY LIST */
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.category-item {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.06); /* خیلی کمرنگ */
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background: rgba(255,255,255,0.01);
+}
+
+.category-item:hover {
+  border-color: rgba(0,180,255,0.4);
+  background: rgba(0,180,255,0.05);
+}
+
+.category-item.active {
+  border-color: #00b4ff;
+  background: rgba(0,180,255,0.12);
+  color: #8fd9ff;
+}
+
+/* FOOTER */
+.footer {
+  padding: 30px;
+  text-align: center;
+  background: #07121e;
+  opacity: 0.7;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .marketplace {
+    grid-template-columns: 1fr;
+  }
+}

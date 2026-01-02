@@ -1,0 +1,336 @@
+/* =========================================
+   1. RESET & GLOBAL STYLES
+   ========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #050b14;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Utility Colors */
+.text-orange { color: #fb923c; }
+.text-blue { color: #38bdf8; }
+.text-grey { color: #94a3b8; }
+.text-highlight { color: #ffffff; font-weight: 600; }
+
+/* Orange Button Style */
+.btn-orange {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f97316;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-orange:hover {
+    background-color: #ea580c;
+    transform: translateY(-2px);
+}
+
+/* SVG Icons */
+svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* =========================================
+   2. HERO SECTION
+   ========================================= */
+.hero-section {
+    padding: 100px 0 80px;
+    background: radial-gradient(circle at 50% 0%, #111f36 0%, #050b14 60%);
+    text-align: center;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    border-radius: 50px;
+    background: rgba(56, 189, 248, 0.1);
+    color: #38bdf8;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.hero-description {
+    color: #cbd5e1;
+    font-size: 1.1rem;
+    max-width: 650px;
+    margin: 0 auto 100px;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    align-items: start;
+    text-align: left;
+    margin-bottom: 60px;
+}
+
+.section-label {
+    color: #38bdf8;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.section-label::before {
+    content: ''; display: block; width: 20px; height: 2px; background-color: #fb923c;
+}
+
+.sub-title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.story-text p {
+    margin-bottom: 20px;
+    color: #94a3b8;
+}
+
+/* =========================================
+   3. SERVICES SECTION
+   ========================================= */
+.services-section {
+    padding: 80px 0;
+}
+
+.center-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.center-label {
+    color: #0ea5e9;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.center-label::before, .center-label::after {
+    content: ''; display: block; width: 30px; height: 1px; background-color: #1e293b;
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 120px;
+}
+
+.card {
+    background-color: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    padding: 30px 24px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: #38bdf8;
+    transform: translateY(-5px);
+}
+
+.icon-box {
+    width: 48px; height: 48px;
+    background: rgba(14, 165, 233, 0.1);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 20px; color: #38bdf8;
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+/* Philosophy */
+.philosophy-wrapper {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.philo-label {
+    color: #0ea5e9; font-size: 0.8rem; font-weight: 600;
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-bottom: 20px; text-transform: uppercase;
+}
+
+.philo-title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   4. TEMPLATES SECTION
+   ========================================= */
+.templates-section {
+    padding: 100px 0;
+}
+
+.feature-panel {
+    background-color: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 16px;
+    padding: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.feature-intro {
+    font-size: 1rem; color: #cbd5e1; margin-bottom: 15px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 50px 0;
+    padding: 40px 0;
+    border-top: 1px solid #1e293b;
+    border-bottom: 1px solid #1e293b;
+}
+
+.feature-item {
+    display: flex; gap: 16px; align-items: flex-start;
+}
+
+.feature-icon-circle {
+    flex-shrink: 0; width: 40px; height: 40px;
+    background: rgba(56, 189, 248, 0.1);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: #38bdf8;
+}
+
+.feature-item h4 {
+    font-size: 1rem; margin-bottom: 5px; color: white;
+}
+
+.feature-item p {
+    font-size: 0.9rem; color: #94a3b8;
+}
+
+/* =========================================
+   5. FOOTER SECTION
+   ========================================= */
+.footer-section {
+    padding: 80px 0 40px;
+    text-align: center;
+    background: linear-gradient(to top, #02060c 0%, #050b14 100%);
+    border-top: 1px solid #1e293b;
+}
+
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 0 80px;
+}
+
+/* Outline Button */
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    color: #38bdf8;
+    border: 1px solid #38bdf8;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background-color: rgba(56, 189, 248, 0.1);
+}
+
+.copyright {
+    border-top: 1px solid #1e293b;
+    padding-top: 30px;
+    color: #475569;
+    font-size: 0.85rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   6. RESPONSIVE MEDIA QUERIES
+   ========================================= */
+@media (max-width: 900px) {
+    .cards-grid { grid-template-columns: repeat(2, 1fr); }
+    .hero-title, .philo-title, .section-heading { font-size: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+    .hero-title { font-size: 2.2rem; }
+    .story-grid { grid-template-columns: 1fr; gap: 30px; }
+    .cards-grid { grid-template-columns: 1fr; }
+    .features-grid { grid-template-columns: 1fr; gap: 30px; padding: 30px 0; }
+    .feature-panel { padding: 30px 20px; }
+    .footer-buttons { flex-direction: column; width: 100%; max-width: 300px; margin: 40px auto; }
+    .btn-orange, .btn-outline { width: 100%; justify-content: center; }
+}

@@ -1,0 +1,11 @@
+[
+  { "title": "SaaS Landing", "price": 49, "category": "landing", "img":"/Img/Cards/SaaS Landing.png" },
+  { "title": "Dashboard Pro", "price": 79, "category": "dashboard", "img": "/Img/Cards/Dashboard Pro.png" },
+  { "title": "Creative Portfolio", "price": 39, "category": "portfolio", "img": "/Img/Cards/Creative Portfolio.png" },
+  { "title": "Startup Landing", "price": 69, "category": "landing", "img": "/Img/Cards/Startup Landing.png" },
+  { "title": "Marketing Site", "price": 89, "category": "landing", "img": "/Img/Cards/Marketing Site.png" },
+  { "title": "App Kit", "price": 59, "category": "dashboard", "img": "/Img/Cards/App Kit.png" },
+  { "title": "Minimal Portfolio", "price": 45, "category": "portfolio", "img": "/Img/Cards/Minimal Portfolio.png" },
+  { "title": "Ecommerce UI", "price": 75, "category": "dashboard", "img": "/Img/Cards/Ecommerce UI.png" },
+  { "title": "Agency Landing", "price": 65, "category": "landing", "img": "/Img/Cards/Agency Landing.png" }
+]

@@ -1,0 +1,324 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0d1b2a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px; /* فاصله از بالای صفحه */
+}
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 1;
+}
+.header {
+  text-align: center;
+  margin-bottom: 30px; /* فاصله از فرم */
+}
+
+.header .logo {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #ff6b35, #00a8e8);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  margin: 0 auto 10px auto;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.header p {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* کانتینر فرم */
+.container {
+  width: 420px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 14px;
+  padding: 40px;
+  margin: 20px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 2;
+  width: 420px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-radius: 14px;
+  padding: 30px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+}
+.container label{
+ padding-top: 15px;
+ font-size: 1rem;
+}
+.container input{
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* برای انیمیشن نرم */
+}
+
+input:focus {
+    border-color: #00A8E8; /* رنگ آبی دور input */
+    box-shadow: 0 0 10px rgba(94, 186, 251, 0.1);
+    transform: scale(1.02); /* کمی بزرگتر می‌شود */
+    outline: none; /* حذف خط پیش‌فرض مرورگر */
+}
+.logo {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.logo div {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #ff6b35, #00a8e8);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0 auto;
+  color: #fff;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-bottom: 6px;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background: #0f2538;
+  border: 1px solid #213548;
+  color: #fff;
+  font-size: 14px;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper i {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+
+
+button {
+  width: 100%;
+  padding: 14px;
+  background: #ff6b35;
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #00a8e8;
+  box-shadow: 0 0 15px rgba(94, 186, 251, 0.4);
+  transform: scale(1.01);
+}
+
+.login-text {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.login-text a {
+  color: #00a8e8;
+  text-decoration: none;
+}
+
+.footer-note {
+  text-align: center;
+  opacity: 0.5;
+  font-size: 11px;
+  margin-top: 10px;
+}
+.old-acc{
+    padding-top:20px;
+    text-align: center;
+}
+.Login-p{
+    text-decoration: none;
+    color: #00a8e8;
+}
+.Login-p:hover{
+    color: #ff6b35;
+}
+.text-footer-form{
+    text-align: center;
+    padding-top: 15px;
+    font-size: 0.7rem;
+}
+.check-role {
+  display: flex;           /* کنار هم قرار گرفتن عناصر */
+  align-items: center;     /* وسط چین عمودی */
+  gap: 10px;               /* فاصله بین چک‌باکس و متن */
+  font-size: 16px;         /* اندازه متن */
+  padding-top: 10px;
+ 
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* فاصله بین چک‌باکس و متن */
+  
+}
+
+.forget-pass {
+  text-decoration: none;
+  color: #00A8E8;
+  font-size: 14px;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.check-role input[type="checkbox"] {
+  width: 18px;             /* اندازه چک‌باکس */
+  height: 18px;
+  cursor: pointer;         /* نشانگر ماوس */
+}
+
+.check-role label {
+  cursor: pointer;         /* وقتی روی متن کلیک می‌کنیم چک‌باکس فعال شود */
+}
+
+/* تنظیمات پایه برای glow */
+.glow {
+  position: fixed;          /* روی صفحه ثابت */
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;       /* دایره */
+  opacity: 0.6;
+  z-index: -1;              /* پشت بقیه محتوا */
+  animation: pulse 2s infinite; /* انیمیشن ضربان */
+}
+
+
+.glow {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  opacity: 0.2;           /* خیلی کم رنگ */
+  z-index: -1;             /* پشت محتوا */
+  filter: blur(60px);      /* محو شدن شدید */
+  animation: pulse 4s infinite; /* انیمیشن نرم و آرام */
+}
+
+/* رنگ‌ها و مکان‌ها */
+.glow.blue {
+  background-color: #00A8E8;
+  top: 20px;
+  right: 20px;
+}
+
+.glow.orange {
+  background-color: #FF6B35;
+  bottom: 20px;
+  left: 20px;
+}
+
+/* انیمیشن روشن و خاموش شدن */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.15;         /* کم رنگ */
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.3;          /* کمی روشن‌تر */
+  }
+}
+
+
+/* فقط برای صفحه لاگین */
+.login-page .check-role {
+  display: flex;
+  justify-content: space-between; /* فاصله بین چک‌باکس و لینک */
+  align-items: center;
+  margin: 10px 0;
+}
+
+.login-page .check-role .remember {
+  display: flex;
+  align-items: center;
+  gap: 2px; /* متن بچسبد به چک‌باکس */
+}
+
+.login-page .check-role label {
+  cursor: pointer; /* وقتی روی متن کلیک می‌کنیم، چک‌باکس تیک بخورد */
+}
+
+.login-page .check-role .forget-pass {
+  text-decoration: none;
+  color: #00A8E8;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
