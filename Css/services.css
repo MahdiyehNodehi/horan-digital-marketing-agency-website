@@ -12,7 +12,108 @@ h1, h2, h3 {
     font-weight: 600;
 }
 
+/* ====== Header ====== */
+header {
+    height: 80px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 15px 8%;
+    box-sizing: border-box;
+    width: 100%;
+    /* عرض کامل */
+    z-index: 1000;
+    padding: 15px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.5s ease;
+    background: rgba(13, 27, 42, 0.9);
+    /* کمی تیره‌تر برای خوانایی */
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* لوگو */
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #fff;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 40px;
+    height: auto;
+    margin-left: 10px;
+    /* فاصله عکس از متن در حالت راست‌چین */
+}
+
+/* منوی وسط */
+.Navlist {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style-type: none;
+    /* فاصله بین آیتم‌ها */
+}
+
+.Navlist a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.Navlist .h-orang a:hover {
+    color: #ff6b35;
+}
+
+.Navlist .h-blue a:hover {
+    color: #00a8e8;
+}
+
+/* بخش سمت چپ (دکمه و آیکون منو) */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.Btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background: linear-gradient(to right, #fd8052, #ff6b35);
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.Btn:hover {
+    background: #ff6b35;
+    box-shadow: 0 0 15px rgba(255, 107, 53, 0.6);
+    transform: scale(1.05);
+}
+
+#menu-icon {
+    font-size: 32px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    /* در حالت دسکتاپ مخفی است */
+    z-index: 10001;
+}
+
 .hero-section {
+    margin-top: 80px;
     height: 20%; /* تمام صفحه */
     display: flex;
     justify-content: center;
