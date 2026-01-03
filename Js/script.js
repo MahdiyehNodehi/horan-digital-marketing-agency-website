@@ -1,4 +1,4 @@
-// ELEMENTS
+// ================= ELEMENTS =================
 const cards = document.getElementById("cards");
 const pages = document.getElementById("pages");
 const prevBtn = document.getElementById("prev");
@@ -8,13 +8,20 @@ const priceValue = document.getElementById("priceValue");
 const searchInput = document.getElementById("searchInput");
 const categoryItems = document.querySelectorAll(".category-item");
 
-// DATA
+// ================= DATA =================
 let data = [];
 let filtered = [];
 let currentPage = 1;
 const perPage = 6;
 
-// FETCH JSON DATA
+// ================= HELPER FUNCTION =================
+function formatToman(price) {
+  const formatted = Number(price).toLocaleString("fa-IR", { minimumFractionDigits: 3 });
+  return formatted + " تومان";
+}
+
+
+// ================= FETCH JSON DATA =================
 fetch("/data/cards.json")
   .then(res => res.json())
   .then(json => {
@@ -24,7 +31,7 @@ fetch("/data/cards.json")
   })
   .catch(err => console.error("Error loading JSON:", err));
 
-// RENDER CARDS
+// ================= RENDER CARDS =================
 function render() {
   cards.innerHTML = "";
   const start = (currentPage - 1) * perPage;
@@ -37,7 +44,7 @@ function render() {
       <img src="${item.img}" alt="${item.title}">
       <div class="card-body">
         <h3>${item.title}</h3>
-        <span class="price">$${item.price}</span>
+        <span class="price">${formatToman(item.price)}</span>
       </div>
     `;
     cards.appendChild(div);
@@ -46,7 +53,7 @@ function render() {
   renderPagination();
 }
 
-// PAGINATION
+// ================= PAGINATION =================
 function renderPagination() {
   pages.innerHTML = "";
   const pageCount = Math.ceil(filtered.length / perPage);
@@ -73,7 +80,7 @@ nextBtn.onclick = () => {
   render();
 };
 
-// CATEGORY FILTER
+// ================= CATEGORY FILTER =================
 categoryItems.forEach(item => {
   item.addEventListener("click", () => {
     categoryItems.forEach(i => i.classList.remove("active"));
@@ -86,15 +93,19 @@ categoryItems.forEach(item => {
   });
 });
 
-// PRICE FILTER
+// ================= PRICE FILTER =================
 priceRange.oninput = () => {
-  priceValue.textContent = `$${priceRange.value}`;
-  filtered = data.filter(i => i.price <= priceRange.value);
+  const sliderValue = Number(priceRange.value); // عدد اسلایدر
+  priceValue.textContent = sliderValue.toLocaleString("fa-IR") + " تومان";
+
+  
+  filtered = data.filter(i => Number(i.price) <= sliderValue);
   currentPage = 1;
   render();
 };
 
-// SEARCH FILTER
+
+// ================= SEARCH FILTER =================
 searchInput.oninput = () => {
   const q = searchInput.value.toLowerCase();
   filtered = data.filter(i => i.title.toLowerCase().includes(q));

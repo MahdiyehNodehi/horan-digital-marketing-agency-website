@@ -1,59 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Template Marketplace</title>
-  <link rel="stylesheet" href="/Css/StorePage.css">
-</head>
-<body>
-<!-- HERO -->
-<section class="hero">
-  <h1>قالب‌های پریمیوم را کشف کنید</h1>
-  <p>قالب‌های حرفه‌ای فرانت‌اند و راهکارهای بازاریابی دیجیتال</p>
-  <input id="searchInput" type="text" placeholder="جستجوی قالب‌ها...">
-</section>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Template Marketplace</title>
+    <link rel="stylesheet" href="../Css/StorePage.css" />
+  </head>
+  <body>
+    <!-- HERO -->
+    <section class="hero">
+      <h1>قالب‌های پریمیوم را کشف کنید</h1>
+      <p>قالب‌های حرفه‌ای فرانت‌اند و راهکارهای بازاریابی دیجیتال</p>
+      <input id="searchInput" type="text" placeholder="جستجوی قالب‌ها..." />
+    </section>
 
-<!-- MAIN -->
-<section class="marketplace">
+    <!-- MAIN -->
+    <section class="marketplace">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <h3>فیلترها</h3>
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-    <h3>فیلترها</h3>
+        <div class="filter categories">
+          <h4>دسته‌بندی‌ها</h4>
 
-    <div class="filter categories">
-      <h4>دسته‌بندی‌ها</h4>
+          <div class="category-item active" data-category="all">
+            همه قالب‌ها
+          </div>
+          <div class="category-item" data-category="landing">لندینگ پیج‌ها</div>
+          <div class="category-item" data-category="dashboard">داشبوردها</div>
+          <div class="category-item" data-category="portfolio">پورتفولیوها</div>
+        </div>
 
-      <div class="category-item active" data-category="all">همه قالب‌ها</div>
-      <div class="category-item" data-category="landing">لندینگ پیج‌ها</div>
-      <div class="category-item" data-category="dashboard">داشبوردها</div>
-      <div class="category-item" data-category="portfolio">پورتفولیوها</div>
-    </div>
+        <div class="filter">
+          <h4>حداکثر قیمت</h4>
+          <input
+            type="range"
+            id="priceRange"
+            min="0"
+            max="5000000"
+            step="1000"
+            value="5000000"
+          />
+          <span id="priceValue"></span>
+        </div>
+      </aside>
 
-    <div class="filter">
-      <h4>حداکثر قیمت</h4>
-      <input type="range" id="priceRange" min="0" max="100" value="0">
-      <span id="priceValue">۱۰۰ دلار</span>
-    </div>
-  </aside>
+      <!-- CARDS -->
+      <div>
+        <div id="cards" class="cards"></div>
 
-  <!-- CARDS -->
-  <div>
-    <div id="cards" class="cards"></div>
+        <!-- PAGINATION -->
+        <div class="pagination">
+          <button id="prev">‹</button>
+          <span id="pages"></span>
+          <button id="next">›</button>
+        </div>
+      </div>
+    </section>
 
-    <!-- PAGINATION -->
-    <div class="pagination">
-      <button id="prev">‹</button>
-      <span id="pages"></span>
-      <button id="next">›</button>
-    </div>
-  </div>
+    <!-- FOOTER -->
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2025 TemplateStore. All rights reserved.</p>
+    </footer>
 
-</section>
-
-<!-- FOOTER -->
-<!-- FOOTER --> <footer class="footer"> <p>© 2025 TemplateStore. All rights reserved.</p> </footer>
-
-
-<script src="/Js/script.js"></script>
-</body>
+    <script src="/Js/script.js"></script>
+  </body>
 </html>
